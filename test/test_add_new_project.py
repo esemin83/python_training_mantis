@@ -11,7 +11,7 @@ project = Project(random_string(15), random_string(15))
 
 
 def test_add_new_project(app):
-    #app.session.login("administrator", "root")
+    app.session.login("administrator", "root")
     old_list = app.pr.get_project_list()
     app.pr.add_new_project(project)
     new_list = app.pr.get_project_list()

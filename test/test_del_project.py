@@ -3,7 +3,7 @@ from model.project import Project
 
 
 def test_del_project(app):
-    #app.session.login("administrator", "root")
+    app.session.login("administrator", "root")
     if len(app.pr.get_project_list()) == 0:
         app.pr.add_new_project(Project('name1', 'description1'))
     old_list = app.pr.get_project_list()
