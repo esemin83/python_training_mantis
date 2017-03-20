@@ -34,7 +34,7 @@ def app(request, config):
         #fixture = Application(browser=browser, base_url=web_config["baseUrl"])
         fixture = Application(browser=browser, config=config)
     #fixture.session.ensure_login(username=user_conf['username'], password=user_conf['password'])
-    #fixture.session.ensure_login(username=config['webadmin']['username'], password=config['webadmin']['password'])
+    fixture.session.ensure_login(username=config['webadmin']['username'], password=config['webadmin']['password'])
     return fixture
 
 

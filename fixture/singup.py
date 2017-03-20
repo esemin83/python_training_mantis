@@ -1,4 +1,5 @@
 import re
+import quopri
 
 
 class SingupHelper:
@@ -14,6 +15,7 @@ class SingupHelper:
         wd.find_element_by_css_selector('input[type="submit"]').click()
 
         mail = self.app.mail.get_mail(username, password, "[MantisBT] Account registration")
+        #url = self.extract_confirmation_url(quopri.decodestring(mail).decode())
         url = self.extract_confirmation_url(mail)
 
         wd.get(url)
@@ -22,4 +24,4 @@ class SingupHelper:
         wd.find_element_by_css_selector('input[value="Update User"]').click()
 
     def extract_confirmation_url(self, text):
-        return re.search("http://.*$", text, re.MULTILINE).group(0) #re.MULTILINE
+        return re.search("http://.*$", text, re.MULTILINE).group(0)

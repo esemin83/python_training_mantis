@@ -22,6 +22,7 @@
 
 
 def test_3(app):
-    app.session.login("administrator", "root")
-    assert app.soap.get_projects("administrator", "root")
-    #print(list)
+    #app.session.login("administrator", "root")
+    #assert app.soap.get_projects("administrator", "root")
+    list = app.soap.get_projects()
+    print('\n', list)

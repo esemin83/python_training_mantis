@@ -26,5 +26,5 @@ class MailHelper:
 
             pop.quit()
             #pop.close()
-            time.sleep(3)
+            time.sleep(7)
         return None
