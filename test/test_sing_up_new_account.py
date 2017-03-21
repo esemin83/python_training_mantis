@@ -8,7 +8,7 @@ def random_name(prefix, maxlen):
 
 
 def test_sing_up_new_account(app):
-    app.session.login("administrator", "root")
+    #app.session.login("administrator", "root")
     username = random_name("user_", 10)
     email = username + "@localhost"
     password = "test"
@@ -19,7 +19,7 @@ def test_sing_up_new_account(app):
     app.session.logout()
 
 
-def test_sing_up_new_account_soap(app):
+def test_account_soap(app):
     #app.session.login("administrator", "root")
     username = random_name("user_", 15)
     email = username + "@localhost"

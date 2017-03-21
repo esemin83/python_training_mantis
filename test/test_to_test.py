@@ -1,4 +1,4 @@
-
+from model.project import Project
 
 #def test_1(app):
 #    app.session.login("administrator", "root")
@@ -21,8 +21,9 @@
 #    app.soap.can_login("administrator", "root")
 
 
-def test_3(app):
-    #app.session.login("administrator", "root")
-    #assert app.soap.get_projects("administrator", "root")
-    list = app.soap.get_projects()
-    print('\n', list)
+#def test_3(app):
+#    list = app.soap.get_projects()
+#    print('\n', list)
+
+
+

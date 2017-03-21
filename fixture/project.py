@@ -53,3 +53,4 @@ class Project:
         wd.find_element_by_name("description").clear()
         wd.find_element_by_name("description").send_keys("%s" % project.description)
         wd.find_element_by_css_selector("input.button").click()
+

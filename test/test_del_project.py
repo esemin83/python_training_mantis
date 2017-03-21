@@ -17,7 +17,7 @@ def test_del_project(app):
     print('new = ', new_list)
 
 
-def test_del_project_soap(app):
+def test_soap_del(app):
     #app.session.login("administrator", "root")
     if len(app.soap.get_projects()) == 0:
         app.pr.add_new_project(Project('name1', 'description1'))
