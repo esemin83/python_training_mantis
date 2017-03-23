@@ -27,6 +27,7 @@ class Application:
             self.soap = SoapHelper(self)
             self.config = config
             self.base_url = config['web']['baseUrl']
+            self.wsdl = config['soap']['wsdl']
 
         def is_valid(self):
             try:

@@ -10,10 +10,10 @@ from model.project import Project
 #    print(l)
 
 
-#def test_3(app):
+def test_3(app):
 #    app.session.login("administrator", "root")
-#    ver = app.soap.get_version()
-#    print("mantis version is %s " % ver)
+    ver = app.soap.get_version()
+    print("mantis version is %s " % ver)
 
 
 #def test_4(app):
